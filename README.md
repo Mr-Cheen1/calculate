@@ -3,10 +3,10 @@
   
   # Калькулятор Времени
   
-  ![Lint](https://github.com/Mr-Cheen1/calculate/workflows/Lint/badge.svg?branch=676)
-  ![Test](https://github.com/Mr-Cheen1/calculate/workflows/Test/badge.svg?branch=676)
-  ![Build](https://github.com/Mr-Cheen1/calculate/workflows/Build/badge.svg?branch=676)
-  ![Go Version](https://img.shields.io/github/go-mod/go-version/Mr-Cheen1/calculate?branch=676)
+  ![Lint](https://github.com/Mr-Cheen1/calculate/workflows/Lint/badge.svg)
+  ![Test](https://github.com/Mr-Cheen1/calculate/workflows/Test/badge.svg)
+  ![Build](https://github.com/Mr-Cheen1/calculate/workflows/Build/badge.svg)
+  ![Go Version](https://img.shields.io/github/go-mod/go-version/Mr-Cheen1/calculate)
   
   Десктопное приложение для суммирования временных интервалов, созданное с использованием Go и Wails.
 </div>
