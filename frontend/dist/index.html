@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Калькулятор времени</title>
+    
+  <script type="module" crossorigin src="/assets/index.92ba4085.js"></script>
+  <link rel="stylesheet" href="/assets/index.d5f780ef.css">
+</head>
+<body>
+<div id="app">
+    <div class="calculator">
+        <div class="result-display">
+            <div class="total-label">Сумма:</div>
+            <div class="total-time" id="totalTime">00:00:00</div>
+        </div>
+        
+        <div class="button-row">
+            <button id="pasteBtn" class="paste-btn" title="Вставить из буфера обмена">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="9" y="9" width="13" height="13" rx="2"/>
+                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+                </svg>
+                Вставить
+            </button>
+            <button id="clearBtn" class="clear-btn" title="Очистить все">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="3 6 5 6 21 6"/>
+                    <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/>
+                </svg>
+                Очистить
+            </button>
+        </div>
+
+        <div class="time-list" id="timeList">
+            <!-- Time entries will be added here -->
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
