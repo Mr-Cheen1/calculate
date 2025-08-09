@@ -14,6 +14,9 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Enable paste from keyboard
     document.addEventListener('paste', handlePasteEvent);
+
+    // Ensure empty state is rendered on initial load
+    updateDisplay();
 });
 
 // Handle paste button click
@@ -49,14 +52,20 @@ function handlePasteEvent(event) {
     }
 }
 
-// Process pasted time data
+// Process pasted time data (backend only; no frontend fallback)
 async function processTimeData(text) {
-    // Call Go backend to parse and calculate
-    const result = await ParseAndCalculateTime(text);
-    
-    // Add new entries to existing ones
-    if (result.entries && result.entries.length > 0) {
-        timeEntries = [...timeEntries, ...result.entries];
+    try {
+        const result = await ParseAndCalculateTime(text);
+        if (result.entries && result.entries.length > 0) {
+            timeEntries = [...timeEntries, ...result.entries];
+            updateDisplay();
+        } else {
+            // redraw to show empty state when nothing parsed
+            updateDisplay();
+        }
+    } catch (err) {
+        console.error('Failed to process data via backend:', err);
+        // keep UI consistent
         updateDisplay();
     }
 }
